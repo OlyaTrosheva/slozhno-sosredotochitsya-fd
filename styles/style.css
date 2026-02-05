@@ -8,17 +8,17 @@ html {
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: var(--main-font-family); 
+  font-family: var(--main-font-family);
   min-inline-size: 375px;
-  margin-inline: 0 auto;
+  margin: 0 auto;
 }
 
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr min-content 1fr; 
+  grid-template-rows: 1fr min-content 1fr;
   min-height: 668px;
-  height: 100vh; 
+  height: 100vh;
   padding: 0 10px;
   box-sizing: border-box;
 }
@@ -27,16 +27,16 @@ html {
   display: flex;
   align-items: center;
   color: var(--accent-color);
-  gap: 10px;  
+  gap: 10px;
   position: absolute;
   top: 1px;
-  right: 10px; 
+  right: 10px;
 }
 
 .rec {
   font-size: 18px;
   font-weight: 400;
-  line-height: 25px; 
+  line-height: 25px;
   margin: 0;
   padding: 0;
 }
@@ -52,7 +52,7 @@ html {
 }
 
 .decorated-zone {
-  position: relative; 
+  position: relative;
   block-size: 100%;
   inline-size: 100%;
 }
@@ -88,9 +88,9 @@ html {
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; 
+  align-items: flex-end;
   gap: 12px;
-  list-style: none; 
+  list-style: none;
 }
 
 .header__theme-menu-button {
@@ -124,7 +124,7 @@ html {
   font-weight: 700;
   color: var(--header-logo-color);
   text-shadow: 4px 4px 0 var(--accent-color);
-  margin: 0; 
+  margin: 0;
   inline-size: 355px;
   grid-row: 2;
   transform: translateY(-7px);
@@ -133,8 +133,8 @@ html {
 .header__description {
   font-size: 18px;
   font-weight: 700;
-  align-self: center; 
-  margin-block-start: 1px; 
+  align-self: center;
+  margin-block-start: 1px;
   margin-block-end: 25px;
   grid-row: 3;
 }
@@ -149,7 +149,7 @@ html {
 
 .content {
   display: grid;
-  padding: 0 10px; 
+  padding: 0 10px;
   gap: 10px;
   box-sizing: border-box;
 }
@@ -165,11 +165,11 @@ html {
 .causes .content-section__title {
   grid-column: 1 / -1;
   max-width: 355px;
-} 
+}
 
 .causes .text-blocks {
   grid-column: 1 / -1;
-} 
+}
 
 .content-section__title {
   color: var(--nav-color);
@@ -179,7 +179,7 @@ html {
   line-height: 23.4px;
 }
 
-.text-block__title, 
+.text-block__title,
 .text-block__subtitle {
   background-color: var(--accent-color);
   color: var(--main-bg-color);
@@ -203,7 +203,7 @@ html {
 
 .text-block__subtitle {
   font-weight: 400;
-  margin: 0 0 5px; 
+  margin: 0 0 5px;
 }
 
 .text-block__content {
@@ -212,10 +212,10 @@ html {
   font-size: 18px;
   line-height: 23.4px;
   margin: 0 0 20px;
-}  
+}
 
 .link {
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   color: var(--nav-color);
   transition: border-bottom 0.3s ease;
@@ -270,11 +270,11 @@ html {
   line-height: 83%;
   font-weight: 700;
   color: var(--header-logo-color);
-  text-shadow: 4px 4px 0 var(--accent-color); 
+  text-shadow: 4px 4px 0 var(--accent-color);
   transform: translateY(-5px);
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
   .page {
     max-inline-size: 768px;
   }
@@ -282,7 +282,7 @@ html {
   .header {
     min-height: 1024px;
     padding: var(--main-gap);
-  } 
+  }
 
   .header__theme-menu {
     justify-self: end;
@@ -296,12 +296,12 @@ html {
     font-size: 120px;
     inline-size: 576px;
     margin-inline-start: 10px;
-    inset-inline-start: calc(-2 * var(--main-gap)); 
+    inset-inline-start: calc(-2 * var(--main-gap));
   }
 
   .header__description {
     inline-size: 364px;
-    justify-self: end; 
+    justify-self: end;
     align-self: center;
     grid-column: 1/2;
     margin-inline-end: 10px;
@@ -344,7 +344,7 @@ html {
   }
 
   .text-block__title {
-    margin: 0 0 10px; 
+    margin: 0 0 10px;
   }
 
   .text-block__subtitle {
@@ -352,7 +352,7 @@ html {
   }
 
   .advices .text-block__content {
-  margin-block-end: 25px;
+    margin-block-end: 25px;
   }
 
   .images-title {
@@ -395,7 +395,7 @@ html {
 }
 
 
-@media (width >= 1024px) {
+@media (width >=1024px) {
   .page {
     max-inline-size: 1024px;
     box-sizing: border-box;
@@ -407,7 +407,7 @@ html {
 
   .header__theme-menu {
     justify-self: center;
-    align-self: start;  
+    align-self: start;
   }
 
   .header__theme-menu-list {
@@ -429,7 +429,7 @@ html {
   .content-section {
     margin-block-start: 26px;
   }
-  
+
   .causes .text-blocks {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -447,7 +447,7 @@ html {
   }
 
   .advices .text-block__content {
-  margin-block-end: 30px;
+    margin-block-end: 30px;
   }
 
   .text-block__subtitle {
@@ -460,9 +460,8 @@ html {
     margin-block-start: 50px;
   }
 
-  .footer__logo{
+  .footer__logo {
     font-size: 157px;
     inline-size: 471px;
   }
 }
-

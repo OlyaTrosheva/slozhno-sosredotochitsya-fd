@@ -149,16 +149,8 @@ html {
 .content {
   display: grid;
   padding: 0 10px;
-  gap: 10px;
-  box-sizing: border-box;
-}
-
-.why {
-  margin-block-start: 30px;
-}
-
-.content-section {
-  margin-block-end: 10px; 
+  gap: 30px;
+  margin-block-start: 40px;
 }
 
 .causes .content-section__title {
@@ -176,6 +168,7 @@ html {
   font-style: bold;
   font-size: 18px;
   line-height: 23.4px;
+  margin: 0 0 20px;
 }
 
 .text-block__title,
@@ -192,17 +185,13 @@ html {
   padding: 0;
 }
 
-.advices .text-block__content {
-  margin-block-end: 24px;
-}
-
-.text-block__title--special {
-  margin-block-end: 26px;
+.text-block__title-special {
+  margin-block-end: 20px;
 }
 
 .text-block__subtitle {
   font-weight: 400;
-  margin: 0 0 5px;
+  margin: 0 0 10px 0;
 }
 
 .text-block__content {
@@ -250,7 +239,7 @@ html {
   background-color: var(--accent-color);
   color: var(--main-bg-color);
   font-size: 18px;
-  margin-block-end: 5px;
+  margin: 1px 0 10px 0;
 }
 
 /* footer */
@@ -269,8 +258,7 @@ html {
   line-height: 83%;
   font-weight: 700;
   color: var(--header-logo-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
-  transform: translateY(-5px);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 @media (width >=768px) {
@@ -294,8 +282,7 @@ html {
     align-self: start;
     font-size: 120px;
     inline-size: 576px;
-    margin-inline-start: 10px;
-    inset-inline-start: calc(-2 * var(--main-gap));
+    inset-inline-start: calc(-1 * var(--main-gap));
   }
 
   .header__description {
@@ -308,7 +295,7 @@ html {
 
   .decorated-zone::before {
     inset-inline-end: 20px;
-    inset-block-start: var(--main-gap);
+    inset-block-start: 20px;
   }
 
   .decorated-zone::after {
@@ -322,7 +309,9 @@ html {
   }
 
   .content {
-    padding: 20px;
+    padding: 0 20px;
+    gap: 60px;
+    margin-block-start: 60px;
   }
 
   .content-section {
@@ -330,11 +319,10 @@ html {
     grid-template-columns: 1fr 2fr;
     gap: 18px;
     align-items: flex-start;
-    margin-block-start: 35px;
   }
 
   .content-section__title {
-    margin-top: 0;
+    margin: 0;
   }
 
   .causes .content-section__title {
@@ -346,12 +334,12 @@ html {
     margin: 0 0 10px;
   }
 
-  .text-block__subtitle {
-    margin-block-end: 10px;
+  .text-block__title-special {
+    margin-block-end: 20px;
   }
 
-  .advices .text-block__content {
-    margin-block-end: 27px;
+  .text-block__subtitle {
+    margin-block-end: 10px;
   }
 
   .images-title {
@@ -390,10 +378,9 @@ html {
     min-height: 1024px;
     text-align: center;
     height: 100vh;
-    margin-block-start: 50px;
+    margin-block-start: 60px;
   }
 }
-
 
 @media (width >=1024px) {
   .page {
@@ -402,6 +389,16 @@ html {
 
   .header {
     min-height: 768px;
+  }
+
+  .decorated-zone::before {
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
   }
 
   .header__theme-menu {
@@ -413,7 +410,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 0;
+    margin-top: 10px;
   }
 
   .header__logo {
@@ -425,50 +422,22 @@ html {
     inline-size: 491px;
   }
 
-  .content-section {
-    margin-block-start: 29px;
-  }
-
   .causes .text-blocks {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 18px;
   }
 
-  .why,
-  .advices {
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-  }
-
-  .text-block__content {
-    margin-block-end: 10px;
-  }
-
-  .advices .text-block__content {
-    margin-block-end: 22px;
-  }
-
-  .advices {
-    margin-bottom: 30px;
-  }
-
-  .causes .text-block__content {
-    margin-block-end: 30px;
-  }
-
-  .text-block__subtitle {
-    margin-block-end: 10px;
-  }
-
-  .images-title {
-    margin-block-end: 20px;
+  .causes .content-section__title {
+    grid-column: 1 / 2;
+    margin: 0;
+    max-width: none;
   }
 
   .footer {
     min-height: 768px;
     height: 100vh;
-    margin-block-start: 50px;
+    margin-block-start: 60px;
   }
 
   .footer__logo {

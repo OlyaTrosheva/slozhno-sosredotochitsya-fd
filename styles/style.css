@@ -8,8 +8,8 @@ html {
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: var(--main-bg-color);
   font-family: var(--main-font-family);
-  min-inline-size: 375px;
   margin: 0 auto;
 }
 
@@ -27,13 +27,14 @@ html {
   display: flex;
   align-items: center;
   color: var(--accent-color);
-  gap: 10px;
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 19px;
 }
 
 .rec {
+  display: inline-flex;
+  align-items: center;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -41,14 +42,14 @@ html {
   padding: 0;
 }
 
-.ellipse {
-  width: 9px;
-  height: 9px;
+.rec::after {
+  content: '';
+  inline-size: 9px;
+  block-size: 9px;
   border-radius: 50%;
   background-color: var(--accent-color);
   box-shadow: 0 0 4px 2px var(--accent-color);
-  flex-shrink: 0;
-  margin-inline-end: 9px;
+  margin-inline-start: 10px;
 }
 
 .decorated-zone {
@@ -90,16 +91,18 @@ html {
   align-items: flex-end;
   gap: 12px;
   list-style: none;
+  margin-block-start: 7px;
 }
 
 .header__theme-menu-button {
+  font-family: inherit;
   background-color: transparent;
   border: none;
   color: var(--nav-color);
   font-size: 18px;
   font-weight: 400;
   text-transform: lowercase;
-  padding: 0 13px;
+  padding: 1px 13px 1.5px 13px;
   cursor: pointer;
 }
 
@@ -109,7 +112,7 @@ html {
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.4);
+  outline: 1px solid rgba(var(--button-hover-color), 0.4);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -174,7 +177,7 @@ html {
 .text-block__title,
 .text-block__subtitle {
   background-color: var(--accent-color);
-  color: var(--main-bg-color);
+  color: var(--title-accent-color);
   font-size: 18px;
   line-height: 23.4px;
 }
@@ -203,19 +206,18 @@ html {
 }
 
 .link {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 1px 1px var(--accent-color);
   text-decoration: none;
-  color: var(--nav-color);
+  color: var(--main-text-color);
   transition: border-bottom 0.3s ease;
 }
 
 .link:hover {
-  border-bottom: 2px solid var(--nav-color);
+  border-bottom: 1px solid var(--main-text-color);
 }
 
 .link:focus-visible {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
+  outline: 1px solid var(--main-text-color);
 }
 
 /* Секция 4 */
@@ -237,7 +239,7 @@ html {
 
 .images-title {
   background-color: var(--accent-color);
-  color: var(--main-bg-color);
+  color: var(--title-accent-color);
   font-size: 18px;
   margin: 1px 0 10px 0;
 }
@@ -254,7 +256,7 @@ html {
 }
 
 .footer__logo {
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 83%;
   font-weight: 700;
   color: var(--header-logo-color);
@@ -262,10 +264,6 @@ html {
 }
 
 @media (width >=768px) {
-  .page {
-    max-inline-size: 768px;
-  }
-
   .header {
     min-height: 1024px;
     padding: var(--main-gap);
@@ -274,13 +272,14 @@ html {
   .header__theme-menu {
     justify-self: end;
     align-self: center;
+    margin-inline-end: 10px;
   }
 
   .header__logo {
     position: relative;
     justify-self: start;
     align-self: start;
-    font-size: 120px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     inline-size: 576px;
     inset-inline-start: calc(-1 * var(--main-gap));
   }
@@ -304,7 +303,7 @@ html {
   }
 
   .sidebar {
-    margin-block-start: 12px;
+    margin-block-start: 10px;
     margin-inline-end: 10px;
   }
 
@@ -383,10 +382,6 @@ html {
 }
 
 @media (width >=1024px) {
-  .page {
-    max-inline-size: 1024px;
-  }
-
   .header {
     min-height: 768px;
   }
@@ -410,11 +405,12 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 10px;
+    margin-block-start: 10px;
+    margin-inline-start: 10px;
   }
 
   .header__logo {
-    font-size: 157px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     inline-size: 759px;
   }
 
@@ -441,7 +437,7 @@ html {
   }
 
   .footer__logo {
-    font-size: 157px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     inline-size: 471px;
   }
 }
